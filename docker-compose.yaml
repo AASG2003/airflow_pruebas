@@ -84,11 +84,11 @@ x-airflow-common:
   deploy:
     resources:
       limits:
-        cpus: '${AIRFLOW_CPU_LIMIT:-3.0}'  # Limitar a 2 CPUs por defecto
+        cpus: '${AIRFLOW_CPU_LIMIT:-2.0}'  # Limitar a 2 CPUs por defecto
         memory: '${AIRFLOW_MEMORY_LIMIT:-4G}'  # Limitar a 2GB RAM por defecto
-      reservations:
-        cpus: '${AIRFLOW_CPU_RESERVATION:-2.0}'  # Reservar al menos 1 CPU
-        memory: '${AIRFLOW_MEMORY_RESERVATION:-2G}'  # Reservar al menos 1GB RAM
+      # reservations:
+      #   cpus: '${AIRFLOW_CPU_RESERVATION:-2.0}'  # Reservar al menos 1 CPU
+      #   memory: '${AIRFLOW_MEMORY_RESERVATION:-2G}'  # Reservar al menos 1GB RAM
   depends_on:
     &airflow-common-depends-on
     # redis:
