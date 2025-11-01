@@ -25,8 +25,8 @@ default_params = {
     
     # Credenciales API
     'api_url': ("http://host.docker.internal:8000").rstrip("/"),  # URL base de la API
-    'api_username': 'correo@ejemplo.com',  # Usuario para la API
-    'api_password': 'prueba1234'  # Contraseña para la API (requerido)
+    'api_username': 'admin@sistema.edu',  # Usuario para la API
+    'api_password': 'admin123'  # Contraseña para la API (requerido)
 }
 
 def descargar_cursos_netacad(**context):
